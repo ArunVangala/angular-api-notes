@@ -1,0 +1,161 @@
+# Database API Manager - Complete Setup Guide
+
+## 📋 Prerequisites
+- Node.js v20.19.3
+- npm v10.8.2
+- Angular CLI v19.2.17
+- .NET SDK 8.0+
+- Visual Studio 2022 or VS Code
+- SQL Server
+
+## 🏗️ Project Structure
+```
+DatabaseAPIManager/
+├── DatabaseAPI/                    (Backend)
+│   ├── Controllers/
+│   ├── Models/
+│   ├── Services/
+│   ├── Middleware/
+│   └── Program.cs
+├── database-manager-ui/           (Frontend)
+│   ├── src/
+│   │   ├── app/
+│   │   └── environments/
+└── DatabaseAPIManager.sln
+```
+
+## 🚀 Step 1: Create Solution & Backend (15 minutes)
+
+### PowerShell Commands:
+```powershell
+# Navigate to your projects folder
+cd D:\VangalaArun_Solutions
+
+# Create solution folder
+mkdir DatabaseAPIManager
+cd DatabaseAPIManager
+
+# Create .NET solution
+dotnet new sln -n DatabaseAPIManager
+
+# Create Web API project (without Swagger)
+dotnet new webapi -n DatabaseAPI --no-openapi
+dotnet sln add DatabaseAPI/DatabaseAPI.csproj
+
+# Navigate to API project
+cd DatabaseAPI
+
+# Install required packages
+dotnet add package Microsoft.Data.SqlClient
+dotnet add package Newtonsoft.Json
+
+# Create folder structure
+mkdir Models
+mkdir Services
+mkdir Middleware
+```
+
+## 📁 Backend Files to Create
+
+### 1. Models/ApiKeySettings.cs
+### 2. Models/ServerConfig.cs
+### 3. Models/DatabaseRequest.cs
+### 4. Middleware/ApiKeyMiddleware.cs
+### 5. Services/DatabaseService.cs
+### 6. Services/ConnectionStringService.cs
+### 7. Controllers/DatabaseController.cs
+### 8. Program.cs (replace existing)
+### 9. appsettings.json (update)
+
+## 🎨 Step 2: Create Angular Frontend (15 minutes)
+
+### PowerShell Commands:
+```powershell
+# Return to solution root
+cd ..
+
+# Create Angular project
+ng new database-manager-ui --routing --style=scss --skip-git
+
+# Navigate to Angular project
+cd database-manager-ui
+
+# Install dependencies
+npm install bootstrap@5.3.2 @fortawesome/fontawesome-free@6.5.1 --save
+
+# Create services folder
+mkdir src\app\services
+mkdir src\app\models
+mkdir src\app\components
+```
+
+## 📁 Frontend Files to Create
+
+### 1. src/app/models/database.model.ts
+### 2. src/app/services/api.service.ts
+### 3. src/app/services/database.service.ts
+### 4. src/app/app.component.ts (replace)
+### 5. src/app/app.component.html (replace)
+### 6. src/app/app.component.scss (replace)
+### 7. src/app/app.module.ts (update)
+### 8. src/environments/environment.ts
+### 9. src/environments/environment.development.ts
+### 10. src/proxy.conf.json (create)
+### 11. src/styles.scss (update)
+### 12. angular.json (update)
+
+## ⚙️ Step 3: Configuration
+
+### Update angular.json:
+1. Add Bootstrap & FontAwesome to styles array (line ~28)
+2. Add proxy configuration to serve options (line ~70)
+
+### Update appsettings.json:
+- Set your SQL Server connection string
+- Configure API keys
+- Set CORS origins
+
+## 🏃 Step 4: Run the Application
+
+### Terminal 1 - Backend:
+```powershell
+cd DatabaseAPI
+dotnet run --urls "http://localhost:5000"
+```
+
+### Terminal 2 - Frontend:
+```powershell
+cd database-manager-ui
+ng serve
+```
+
+### Access:
+- Frontend: http://localhost:4200
+- Backend API: http://localhost:5000/api/database
+
+## 📊 Key Features
+✅ Fast data retrieval with async/await
+✅ Connection pooling for performance
+✅ API key authentication
+✅ CORS enabled
+✅ Clean architecture
+✅ TypeScript models
+✅ Reactive forms
+✅ Error handling
+✅ Loading states
+✅ Professional UI
+
+## 🔒 Security Features
+- API Key middleware
+- SQL injection prevention
+- Parameterized queries
+- CORS configuration
+- Input validation
+
+## 📝 Next Steps
+1. I'll provide all backend files
+2. Then all frontend files
+3. Configuration updates
+4. Testing instructions
+
+Ready to proceed?
