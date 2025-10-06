@@ -34,22 +34,7 @@ namespace DatabaseAPI.Controllers
                 AllowedProjects = new List<string> { "Samast", "GTD", "G2G", "Dev" },
                 Servers = new List<ServerConfig>
                 {
-                    new() { Name = "DB1", DisplayName = "DB 1 (172.16.13.11)", IPAddress = "172.16.13.11", Project = "Samast" },
-                    new() { Name = "DB2", DisplayName = "DB 2 (172.16.13.12)", IPAddress = "172.16.13.12", Project = "Samast" },
-                    new() { Name = "DB3", DisplayName = "DB 3 (172.16.11.12)", IPAddress = "172.16.11.12", Project = "Samast" },
-                    new() { Name = "VM4", DisplayName = "VM4 (10.10.204.161)", IPAddress = "10.10.204.161", Project = "GTD" },
-                    new() { Name = "VM5", DisplayName = "VM5 (10.10.204.162)", IPAddress = "10.10.204.162", Project = "GTD" },
-                    new() { Name = "VM6", DisplayName = "VM6 (10.10.204.163)", IPAddress = "10.10.204.163", Project = "GTD" },
-                    new() { Name = "VM7", DisplayName = "VM7 (10.10.204.164)", IPAddress = "10.10.204.164", Project = "GTD" },
-                    new() { Name = "VM8", DisplayName = "VM8 (10.10.204.165)", IPAddress = "10.10.204.165", Project = "GTD" },
-                    new() { Name = "VM9", DisplayName = "VM9 (10.10.204.166)", IPAddress = "10.10.204.166", Project = "GTD" },
-                    new() { Name = "DB5", DisplayName = "DB 5 (45.114.246.176)", IPAddress = "45.114.246.176", Project = "G2G" },
-                    new() { Name = "DEV1", DisplayName = "DEV 1 (192.168.0.101)", IPAddress = "192.168.0.101", Project = "Dev" },
-                    new() { Name = "DEV2", DisplayName = "DEV 2 (43.243.79.150)", IPAddress = "43.243.79.150", Project = "Dev" },
-                    new() { Name = "DEV3", DisplayName = "DEV 3 (192.168.0.103)", IPAddress = "192.168.0.103", Project = "Dev" },
-                    new() { Name = "DEV4", DisplayName = "DEV 4 (192.168.0.104)", IPAddress = "192.168.0.104", Project = "Dev" },
-                    new() { Name = "DEV5", DisplayName = "DEV 5 (192.168.0.105)", IPAddress = "192.168.0.105", Project = "Dev" },
-                    new() { Name = "DEV6", DisplayName = "DEV 6 (192.168.0.106)", IPAddress = "192.168.0.106", Project = "Dev" }
+                  ///show all the servers here
                 }
             };
 
